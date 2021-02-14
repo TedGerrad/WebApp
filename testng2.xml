@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Loan Department" parallel= "tests" thread-count="6">
+  	<listeners>
+  		<listener class-name="firsttestngpackage.Listeners"/>
+  	</listeners>
+  	<test name="Personal Loan" parallel="classes" thread-count="2">
+  	<parameter name="URL" value="www.personalloan.com"/>
+  	<parameter name="Pword" value="blackp"/>
+     <classes>
+      <class name="firsttestngpackage.day1">
+      	<methods>
+      		<include name = "Demo"/>
+      	</methods>
+      </class>
+      
+      <class name="firsttestngpackage.day2"/>
+     </classes>
+   
+  </test> 
+  
+  <test name="Car Loan">
+  <parameter name="URL" value="www.carloan.com"/>
+  <parameter name="username" value="123456"/>
+  <classes>
+  	<class name="firsttestngpackage.day3">
+  	<methods>
+  		
+  	</methods>
+  	</class>
+  	
+  </classes>
+  </test>
+  
+  <test name="Home Loan">
+  <classes>
+  	<class name="firsttestngpackage.day4"/>
+  	
+  </classes>
+  </test>
+  <!-- Test -->
+</suite> <!-- Suite -->
